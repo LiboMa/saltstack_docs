@@ -1,0 +1,20 @@
+salt '*' cmd.run 'uname -a'
+salt '*' test.ping 
+
+# best practices
+
+https://docs.saltstack.com/en/latest/topics/best_practices.html
+
+#  targets can be based on Salt minion system information using the Grains system:
+
+salt -G 'os:Ubuntu' test.ping
+# Targets can be filtered by regular expression:
+
+salt -E 'minion[0-9]' test.ping
+# Targets can be explicitly specified in a list:
+
+salt -L 'minion1,minion2' test.ping
+# Or Multiple target types can be combined in one command:
+
+salt -C 'G@os:Ubuntu and minion* or S@192.168.50.*' test.ping
+

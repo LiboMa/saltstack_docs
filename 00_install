@@ -1,0 +1,30 @@
+# Install saltstack local mioor
+curl -L https://bootstrap.saltstack.com -o install_salt.sh
+
+# Reference link
+
+#https://repo.saltstack.com/#rhel 
+# install the agent properly
+yum install salt-master
+yum install salt-minion
+yum install salt-ssh
+yum install salt-syndic
+yum install salt-cloud
+
+# run master
+
+salt-master --log-level=debug
+
+# run-minion
+salt-minion
+
+# set pub key for client
+
+# show the key on the master
+salt-key -L 
+# accept the key of client
+salt-key -A
+
+
+# automation guide 
+https://docs.saltstack.com/en/getstarted/config/

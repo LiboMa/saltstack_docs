@@ -1,0 +1,22 @@
+DEFAULT DATA - YAML
+# Top File - https://docs.saltstack.com/en/latest/ref/states/top.html#states-top 
+# Starting State - https://docs.saltstack.com/en/latest/topics/tutorials/starting_states.html#starting-states 
+# 10 Minutes Guide - https://docs.saltstack.com/en/latest/topics/tutorials/walkthrough.html
+#
+## working with difference envs
+file_roots:
+  dev:
+    - /srv/salt/dev
+  qa:
+    - /srv/salt/qa
+  prod:
+    - /srv/salt/prod
+
+# RUNNING AND DEBUGGING SALT STATES
+
+## on the master
+salt "*" state.apply
+## on minion running 
+salt-call state.apply -l debug
+
+# salt.state.files - https://docs.saltstack.com/en/latest/ref/states/all/salt.states.file.html 

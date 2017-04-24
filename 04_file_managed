@@ -1,0 +1,20 @@
+# Links https://docs.saltstack.com/en/getstarted/config/files.html
+
+install network packages:
+  pkg.installed:
+    - pkgs:
+      - rsync
+      - lftp
+      - curl
+
+# Define single file
+copy lftp config file:
+  file.managed:
+    - name: /etc/lftp.conf
+    - source: salt://_tmpl_lftp.conf
+
+# define file resurse
+copy some files to the web server:
+  file.recurse:
+    - name: /var/www
+    - source: salt://apache/www
