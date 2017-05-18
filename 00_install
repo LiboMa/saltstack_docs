@@ -19,6 +19,9 @@ salt-master --log-level=debug
 salt-minion
 
 # set pub key for client
+salt-key -F # to show pub and private key
+
+# copy pub key into minion 
 
 # show the key on the master
 salt-key -L 
