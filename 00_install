@@ -28,3 +28,12 @@ salt-key -A
 
 # automation guide 
 https://docs.saltstack.com/en/getstarted/config/
+
+Ports used:
+
+salt-master:
+4505
+4506
+
+salt-minion
+
