@@ -1,5 +1,6 @@
 #!/bin/sh
-
+# This script is used for init salt-minon for Linux clients.
+# update @2017.5.18
 
 server="$1"
 if [ -z $server ];then
