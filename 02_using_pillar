@@ -1,4 +1,4 @@
-SETTING UP PILLAR
+# SETTING UP PILLAR
 The pillar is already running in Salt by default. To see the minion's pillar data:
 
 salt '*' pillar.items
