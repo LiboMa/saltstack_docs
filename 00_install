@@ -1,5 +1,7 @@
 # Install saltstack local mioor
 curl -L https://bootstrap.saltstack.com -o install_salt.sh
+# quick install
+https://docs.saltstack.com/en/latest/topics/tutorials/walkthrough.html
 
 # Reference link
 
