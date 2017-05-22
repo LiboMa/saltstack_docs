@@ -14,8 +14,15 @@ copy lftp config file:
     - source: salt://_tmpl_lftp.conf
 
 # define file resurse
+
+delete-directory-before-deploy:
+file.direcoty:
+    - name: /var/www
+    - source: salt://apache/www
+    - clean: True
+    
 copy some files to the web server:
   file.recurse:
     - name: /var/www
     - source: salt://apache/www
-    - clean: True
+    #- clean: True This hands on windows
