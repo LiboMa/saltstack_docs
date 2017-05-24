@@ -6,3 +6,12 @@ salt '*' pillar.items
 #To ensure that the minions have the new pillar data, issue a command to them asking that they fetch their pillars from the master:
 
 salt '*' saltutil.refresh_pillar
+
+using pillar in Jinji files
+
+# example.template
+
+folder="{{ pillar['app_weblog'] }}"
+
+# pillar.template.sls
+app_weblog=/opt/testapp
